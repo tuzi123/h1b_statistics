@@ -31,6 +31,11 @@ To run a different file, e.g., a file named "filename.csv":
 1. Place filename.csv into the /input folder.
 2. In the file `run.sh`, replace "./input/h1b_input.csv" with "./input/filename.csv" 
 3. Run the `run.sh`
+Note: the run.sh could be easily modified to run another file by passing the file name arguement.  
+
+Or Run
+
+    python ./src/h1b_counting.py  ./input/filename.csv  ./output/top_10_occupations.txt  ./output/top_10_states.txt 
 
 # Output 
 
