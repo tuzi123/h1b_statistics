@@ -17,9 +17,10 @@ Raw data could be found [here](https://www.foreignlaborcert.doleta.gov/performan
 
 # Approach
 
-Considering the amount of data is large, the program processes the data when reading the file. The program is structured into three functions. Function process_file() reads the columns related to case status/working location/occupations, processes the data and returns the total number of certified cases, sorted lists of top 10 states and occupations with the corresponding number of certified applications. The function write_file() calculates the percentage of certified applications and writes the results into the output folder. Function main() calls process_file() and write_file().
+Considering the amount of data is large, the program processes the data when reading the file. The program is structured into three functions. Function process_file() reads the columns related to case status/working location/occupations, processes the data, and returns `the total number of certified cases`, sorted lists of `top 10 states and occupations with the corresponding number of certified applications`. The function write_file() calculates the percentage of certified applications and writes the results into the output folder. Function main() calls process_file() and write_file().
 
 The column names related to case status, working location and occupation in the H1B csv file may vary each year. A list of possible names for related columns is stored in the main() function after analyzing the data from different years. If the 2019 H1B data file uses different column names compared with any previous report, it's easy to add the name to the list in the main(). 
+The number 10 (for Top 10 Occupations and Top 10 States) is not hard-coded, it can be changed to the desired value by passing a different argument to process_file().
 
 # Instructions
 
@@ -30,8 +31,8 @@ Run the program with the following command from within the `h1b_statistics` fold
 To run a different file, e.g., a file named "filename.csv":
 1. Place filename.csv into the /input folder.
 2. In the file `run.sh`, replace "./input/h1b_input.csv" with "./input/filename.csv" 
-3. Run the `run.sh`
-Note: the run.sh could be easily modified to run another file by passing the file name arguement.  
+3. Run the `run.sh`  <br /> 
+Note: the `run.sh` file could be easily modified to run another file by passing the file name arguement.  
 
 Or Run
 
